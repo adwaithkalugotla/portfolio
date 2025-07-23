@@ -82,14 +82,16 @@ export default function SpeakBuddy() {
             <Link
               href="https://github.com/adwaithkalugotla/speakbuddy"
               target="_blank"
-              className="btn px-6 py-3 bg-primary text-white rounded-lg"
+              rel="noopener noreferrer"
+              className="btn px-6 py-3 bg-primary text-white rounded-lg transition-colors duration-200 hover:bg-secondary"
             >
               View on GitHub
             </Link>
             <Link
-              href="/videos/livedemo.mp4"
+              href="https://youtu.be/2eny---cx9w"
               target="_blank"
-              className="btn px-6 py-3 border-2 border-primary text-primary rounded-lg"
+              rel="noopener noreferrer"
+              className="btn px-6 py-3 border-2 border-primary text-primary rounded-lg transition-colors duration-200 hover:bg-primary hover:text-white"
             >
               Watch Live Demo
             </Link>
@@ -113,7 +115,6 @@ export default function SpeakBuddy() {
                   transition={{ duration: 0.4 }}
                   className="overflow-hidden rounded-lg shadow-lg bg-white mx-auto"
                 >
-                  {/* force a max-height so the full portrait fits */}
                   <div className="w-56 max-h-[60vh] overflow-hidden mx-auto">
                     <Image
                       src={screenshots[current].src}
@@ -129,7 +130,6 @@ export default function SpeakBuddy() {
                 </motion.figure>
               </AnimatePresence>
 
-              {/* Prev/Next Arrows */}
               <button
                 onClick={prev}
                 className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-200 transition"
