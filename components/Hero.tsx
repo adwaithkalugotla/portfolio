@@ -20,25 +20,37 @@ export default function Hero() {
         AWS & Snowflake‑certified Data Analyst turning raw data into actionable insights.
       </p>
 
-      {/* Your fireworks shot */}
-      <img
-        src="/images/indexpic.jpg"
-        alt="Fireworks celebration"
-        className="w-64 h-64 object-cover rounded-lg shadow-xl mb-8"
-      />
+      {/* Portrait trio: left, center, right */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        {/* Left portrait */}
+        <img
+          src="/images/nehapic2forhero.jpg"
+          alt="Neha smiling (left)"
+          className="w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-lg shadow-md"
+        />
+
+        {/* Center fireworks shot */}
+        <img
+          src="/images/indexpic.jpg"
+          alt="Fireworks celebration"
+          className="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-lg shadow-xl"
+        />
+
+        {/* Right portrait */}
+        <img
+          src="/images/nehapicforhero.jpg"
+          alt="Neha casual pose (right)"
+          className="w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-lg shadow-md"
+        />
+      </div>
 
       <div className="space-x-4">
-
-
-        {/* View All Projects (now correctly pointing to /projects) */}
         <Link
           href="/projects"
           className="btn px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-primary transition"
         >
           View All Projects
         </Link>
-
-        {/* Download Resume */}
         <a
           href="/resume_Adwaith.pdf"
           download
