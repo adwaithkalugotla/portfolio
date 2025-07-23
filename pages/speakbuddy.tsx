@@ -98,6 +98,21 @@ export default function SpeakBuddy() {
           </div>
         </section>
 
+        {/* Capstone Mentor */}
+        <section className="max-w-3xl mx-auto text-center space-y-4">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            My Capstone Mentor
+          </h2>
+          <Image
+            src="/images/capstonementor.jpg"
+            alt="Liu Yunkai"
+            width={300}
+            height={300}
+            className="mx-auto rounded-full shadow-lg"
+          />
+          <p className="text-gray-700 dark:text-gray-300">Liu Yunkai</p>
+        </section>
+
         {/* Screenshot Carousel */}
         <section className="py-16 bg-gray-100 dark:bg-gray-800">
           <div className="max-w-sm mx-auto px-4 text-center space-y-6">
