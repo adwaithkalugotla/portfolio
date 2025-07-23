@@ -17,7 +17,8 @@ export default function Hero() {
     >
       <h1 className="text-5xl font-bold mb-4">Hi, I’m Adwaith Kalugotla</h1>
       <p className="text-xl max-w-xl mb-8">
-        AWS & Snowflake‑certified Data Analyst turning raw data into actionable insights.
+         AWS‑certified Cloud Practitioner & SnowPro Core<br/>
+          Data Analyst & Software Developer transforming messy data into actionable insights and building scalable applications.
       </p>
 
       {/* Portrait trio: left, center, right */}
