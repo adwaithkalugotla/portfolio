@@ -7,7 +7,7 @@ export default function StockPricePredictor() {
   return (
     <>
       <Head>
-        <title>Stock Price Predictor | Adwaith Kalugotla</title>
+        <title>Stock Price Predictor | Adwaith Kalugotla</title>
       </Head>
 
       <motion.section
@@ -17,17 +17,37 @@ export default function StockPricePredictor() {
         className="py-20 px-4 md:px-16 lg:px-32 bg-white dark:bg-gray-900"
       >
         <h2 className="text-4xl font-semibold mb-6 text-gray-900 dark:text-gray-100">
-          Stock Price Predictor
+          Stock Price Predictor
         </h2>
 
-        <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
+        <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
           A web application (Flask/Python & ML) that lets you pick up to 4 tickers,
           visualizes technical indicators, and provides buy/sell/hold recommendations.
         </p>
 
+        {/* Visit Live App button */}
+        <div className="mb-12">
+          <a
+            href="https://stock-predictor-react.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              inline-flex items-center gap-2 px-6 py-3 rounded-lg
+              bg-primary text-white font-medium shadow-md
+              hover:bg-secondary hover:shadow-lg
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+              focus-visible:ring-primary dark:focus-visible:ring-secondary
+              transition
+            "
+            aria-label="Open the live Stock Price Predictor in a new tab"
+          >
+            Visit Live App <span aria-hidden>↗</span>
+          </a>
+        </div>
+
         <ul className="list-disc list-inside space-y-2 mb-12 text-gray-700 dark:text-gray-300">
           <li>Add up to 4 stock symbols for simultaneous prediction</li>
-          <li>Bollinger Bands & 20‑day SMA visualizations</li>
+          <li>Bollinger Bands & 20-day SMA visualizations</li>
           <li>Mean, median & volatility statistics</li>
           <li>Action recommendations: Buy, Sell, or Hold</li>
         </ul>
