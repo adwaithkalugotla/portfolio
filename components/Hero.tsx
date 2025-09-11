@@ -53,7 +53,7 @@ export default function Hero() {
           View All Projects
         </Link>
         <a
-          href="/resume_Adwaith.pdf"
+          href="/web_dev_adwaith.docx"
           download
           className="btn px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-primary transition"
         >
