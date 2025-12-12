@@ -1,96 +1,114 @@
 // components/ResumeHighlights.tsx
-import { motion, Variants } from 'framer-motion'
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { staggerChildren: 0.15, ease: 'easeOut' }
-  }
-}
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95 },
-  show: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { type: 'spring', stiffness: 200, damping: 20 }
-  },
-  hover: {
-    scale: 1.05,
-    boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
-    transition: { duration: 0.3 }
-  }
-}
+import { motion } from "framer-motion";
 
 export default function ResumeHighlights() {
   return (
     <motion.section
-      className="py-20 px-4 md:px-16 lg:px-32 bg-white dark:bg-gray-900"
-      initial="hidden"
-      whileInView="show"
+      id="resume-highlights"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      variants={containerVariants}
+      className="relative overflow-hidden py-24 bg-gradient-to-r from-rose-300 via-stone-200 to-teal-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
     >
-      <h2 className="text-3xl font-semibold mb-8 text-center text-gray-900 dark:text-gray-100">
-        Resume Highlights
-      </h2>
+      {/* Stronger depth so it matches Hero intensity */}
+      <div className="pointer-events-none absolute inset-0 bg-black/10 dark:bg-black/35" />
+      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl dark:bg-purple-500/15" />
+      <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl dark:bg-cyan-500/15" />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Education Card */}
-        <motion.div
-          className="rounded-3xl p-6 bg-gradient-to-br from-indigo-500 to-purple-500 text-white"
-          variants={cardVariants}
-          whileHover="hover"
+      <div className="relative mx-auto max-w-6xl px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white drop-shadow-sm"
         >
-          <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <span>🎓</span> Education
-          </h3>
-          <ul className="space-y-2">
-            <li>
-              <strong>M.S., Information Technology</strong><br />
-              Gannon University (May 2025) — GPA 3.9
-            </li>
-            <li>
-              <strong>B.Tech, Information Technology</strong><br />
-              JNTU (July 2023) — CGPA 7.0
-            </li>
-          </ul>
-        </motion.div>
+          Resume Highlights
+        </motion.h2>
 
-        {/* Certifications Card */}
-        <motion.div
-          className="rounded-3xl p-6 bg-gradient-to-br from-green-400 to-teal-500 text-white"
-          variants={cardVariants}
-          whileHover="hover"
-        >
-          <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <span>🛡️</span> Certifications
-          </h3>
-          <ul className="space-y-2">
-            <li>AWS Certified Cloud Practitioner</li>
-            <li>SnowPro Core Certification</li>
-          </ul>
-        </motion.div>
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Education */}
+          <motion.div
+            whileHover={{ y: -4 }}
+            transition={{ type: "spring", stiffness: 260, damping: 18 }}
+            className="rounded-3xl p-10 shadow-2xl border border-white/25 bg-gradient-to-br from-indigo-700/55 via-indigo-700/35 to-slate-900/35 backdrop-blur-sm"
+          >
+            <div className="flex items-center gap-3 text-white">
+              <span className="text-2xl" aria-hidden>
+                🎓
+              </span>
+              <h3 className="text-2xl font-extrabold">Education</h3>
+            </div>
 
-        {/* Skills Card */}
-        <motion.div
-          className="rounded-3xl p-6 bg-gradient-to-br from-yellow-400 to-orange-500 text-white"
-          variants={cardVariants}
-          whileHover="hover"
-        >
-          <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <span>💻</span> Skills
-          </h3>
-          <ul className="space-y-2">
-            <li>Python, SQL, Java, JavaScript, CSS</li>
-            <li>AWS, Snowflake, Docker, Kubernetes</li>
-            <li>Power BI, Excel, Next.js, Tailwind CSS</li>
-          </ul>
-        </motion.div>
+            <div className="mt-7 space-y-6 text-white/90">
+              <div>
+                <div className="font-extrabold">M.S. Information Technology</div>
+                <div className="font-semibold">
+                  Gannon University (May 2025) — GPA 3.9
+                </div>
+              </div>
+
+              <div>
+                <div className="font-extrabold">B.Tech. Information Technology</div>
+                <div className="font-semibold">JNTU (July 2023) — CGPA 7.0</div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Certifications */}
+          <motion.div
+            whileHover={{ y: -4 }}
+            transition={{ type: "spring", stiffness: 260, damping: 18 }}
+            className="rounded-3xl p-10 shadow-2xl border border-white/25 bg-gradient-to-br from-emerald-700/50 via-emerald-700/30 to-slate-900/35 backdrop-blur-sm"
+          >
+            <div className="flex items-center gap-3 text-white">
+              <span className="text-2xl" aria-hidden>
+                🛡️
+              </span>
+              <h3 className="text-2xl font-extrabold">Certifications</h3>
+            </div>
+
+            <ul className="mt-7 space-y-4 text-white/90 font-semibold">
+              <li className="font-extrabold">AWS Certified Cloud Practitioner</li>
+              <li className="font-extrabold">Snowflake SnowPro Core</li>
+            </ul>
+          </motion.div>
+
+          {/* Skills */}
+          <motion.div
+            whileHover={{ y: -4 }}
+            transition={{ type: "spring", stiffness: 260, damping: 18 }}
+            className="rounded-3xl p-10 shadow-2xl border border-white/25 bg-gradient-to-br from-amber-700/50 via-amber-700/30 to-slate-900/35 backdrop-blur-sm"
+          >
+            <div className="flex items-center gap-3 text-white">
+              <span className="text-2xl" aria-hidden>
+                💻
+              </span>
+              <h3 className="text-2xl font-extrabold">Skills</h3>
+            </div>
+
+            <div className="mt-7 space-y-5 text-white/90">
+              <div>
+                <div className="font-extrabold">Data &amp; Analytics</div>
+                <div className="font-semibold">
+                  SQL, Python, Power BI, Excel, Snowflake
+                </div>
+              </div>
+
+              <div>
+                <div className="font-extrabold">GenAI</div>
+                <div className="font-semibold">GPT-4, Whisper, Prompt Engineering</div>
+              </div>
+
+              <div>
+                <div className="font-extrabold">Engineering</div>
+                <div className="font-semibold">Next.js, Flask, Docker, Tailwind CSS</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </motion.section>
-  )
+  );
 }
