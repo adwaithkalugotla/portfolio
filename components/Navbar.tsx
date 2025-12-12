@@ -13,9 +13,9 @@ export default function Navbar() {
       "
     >
       <div className="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Brand links to top */}
+        {/* Brand links to top of home */}
         <Link
-          href="#hero"
+          href="/#hero"
           className="
             text-xl font-bold
             text-black dark:text-white
@@ -28,7 +28,7 @@ export default function Navbar() {
 
         <div className="space-x-6">
           <Link
-            href="#hero"
+            href="/#hero"
             className="
               text-black dark:text-white
               hover:text-gray-700 dark:hover:text-gray-300
@@ -38,7 +38,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            href="#about"
+            href="/#about"
             className="
               text-black dark:text-white
               hover:text-gray-700 dark:hover:text-gray-300
@@ -48,7 +48,7 @@ export default function Navbar() {
             About
           </Link>
           <Link
-            href="#skills"
+            href="/#skills"
             className="
               text-black dark:text-white
               hover:text-gray-700 dark:hover:text-gray-300
@@ -58,7 +58,17 @@ export default function Navbar() {
             Skills
           </Link>
           <Link
-            href="#live-demo"
+            href="/projects"
+            className="
+              text-black dark:text-white
+              hover:text-gray-700 dark:hover:text-gray-300
+              transition-colors duration-300
+            "
+          >
+            Projects
+          </Link>
+          <Link
+            href="/#live-demo"
             className="
               text-black dark:text-white
               hover:text-gray-700 dark:hover:text-gray-300
