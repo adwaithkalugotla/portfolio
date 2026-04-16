@@ -51,7 +51,7 @@ export default function Hero() {
               View All Projects
             </Link>
             <a
-              href="/BSA_onepage(2).pdf"
+              href="/Adwaith_DataAnalyst_Resume.pdf"
               download
               className="px-6 py-3 border-2 border-white rounded-lg hover:bg-white hover:text-primary transition"
             >

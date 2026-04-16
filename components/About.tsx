@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section
-  id="about"
-  className="py-20 bg-gradient-to-br from-rose-100 via-white to-teal-100"
-  >
+    <section id="about" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Heading */}
         <motion.h2
